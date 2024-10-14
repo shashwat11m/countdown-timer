@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="timer-container">
+            <div class="cont" id="hidden-setting">
+                <div class="timer-setting">
+                    <input type="time" name="time" id="time" class="time-input" step="1" value="00:00:00"><br>
+                    <button id="start">Start</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+            <div class="cont visuallyhidden hidden" id="hidden-clock">
+                <div id="timer-clock" class="timer">
+                   <div id="circle" class="donat outer-circle">
+                       <p class="global_percent center_text"></p>
+                       <p class="local_percent center_text"></p>
+                       <p class="clock-time clock-timer">
+                           <div class="timer-clock" id="timer-text"></div>
+                       </p>
+                   </div>
+                </div>
+                <button id="cancel">Cancel</button>
+                <button id="pause">Pause</button>
+                <button id="resume">Resume</button>
+                <button id="stop-alarm" style="display:none;">Stop Alarm</button>
+                <button id="restart">Restart</button>
+                <audio id="alarm-sound" src="alarm.wav" preload="auto" loop></audio>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Countdown Timer | Made by Shashwat Mishra</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+    :root {
+    --d: 0s;
+    --b: 100%;
+    --bg-color: #1c1c1c;
+    --card-bg: #2c2c2c;
+    --text-color: #ffffff;
+    --circle-color: #65b4da;
+    --circle-bg: #3b3b3b;
+    --start-color: #87CEFA;
+    --pause-color: #FF6347;
+    --resume-color: #87CEFA;
+    --reset-color: #3b3b3b;
+    --start-text-color: #2c2c2c;
+    --resume-text-color: #2c2c2c;
+    }
+    
+    @property --a {
+        syntax: '<percentage>';
+        inherits: false;
+        initial-value: 100%;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: Arial, sans-serif;
+    }
+    
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .timer-container {
+        text-align: center;
+        background-color: var(--card-bg);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .timer-container button {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #start {
+        background-color: var(--start-color);
+        color: var(--start-text-color);
+    }
+    
+    #pause,
+    #resume {
+        width: 120px;
+        display: none;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #pause {
+        background-color: var(--pause-color);
+        color: var(--text-color);
+    }
+    
+    #resume {
+        background-color: var(--resume-color);
+        color: var(--resume-text-color);
+    }
+    
+    #reset, #cancel, #restart {
+        background-color: var(--reset-color);
+        color: var(--text-color);
+    }
+    
+    .timer-container button:hover {
+        opacity: 0.9;
+    }
+    
+    .timer-clock {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        font-size: 52px; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 52px;
+        margin-bottom: 20px;
+    }
+    
+    #hidden-setting, #hidden-clock {
+        position: relative;
+    }
+    
+    .cont {
+        transition: all 0.3s linear;
+        display: block;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .visuallyhidden {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .fade-out {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .timer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px auto;
+        font-size: 2.5vmin;
+    }
+    
+    .donat {
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 1.5vmin solid transparent;
+    }
+    
+    .outer-circle {
+        width: 100%;
+        background: linear-gradient(var(--card-bg), var(--card-bg)) content-box no-repeat,
+                    conic-gradient(var(--circle-color) var(--a), 0, var(--circle-bg)) border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s linear;
+    }
+    
+    .outer-circle.switch {
+        transition: --a var(--d) linear;
+        --a: var(--b) !important;
+        background: linear-gradient(var(--card-bg), var(--card-bg)) content-box no-repeat,
+                    conic-gradient(var(--circle-color) var(--a), 0, var(--circle-bg)) border-box !important; 
+    }
+    
+    .clock-timer {
+        font-size: 10vh;
+    }
+    
+    input[type="time"] {
+        margin: 0 5px 20px 5px;
+        text-align: center;
+        font-size: 24px;
+        padding: 5px 15px;
+        border: 1px solid var(--button-bg);
+        border-radius: 5px;
+        background-color: var(--card-bg);
+        color: var(--text-color);
+    }
+    
+    input[type="time"]::-webkit-calendar-picker-indicator {
+        display: block;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: transparent;
+    }
+
+    @keyframes flash {
+        0% { background-color: red; }
+        50% { background-color: white; }
+        100% { background-color: red; }
+      }
+      
+      body.flash {
+        animation: flash 1s infinite;
+      }
+    
+    
+    #timer-text {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+    }
+    
+    .time-input {
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+    }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      footer {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 10px;
+        background-color: #181818;
+        color: white;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
