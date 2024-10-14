@@ -234,42 +234,40 @@
         font-size: 16px;
     }
 
-/* Customize the datetime picker */
 .datetimepicker {
-    background-color: #b40e0e; /* Dark background */
-    color: #ffffff; /* White text color */
+    background-color: #b40e0e;
+    color: #ffffff;
 }
 
 .datetimepicker .datepicker table tr td.active, 
 .datetimepicker .datepicker table tr td.active:hover {
-    background-color: #5cb85c; /* Green for active day */
-    color: #ffffff; /* White text color for active day */
+    background-color: #5cb85c;
+    color: #ffffff;
 }
 
 .datetimepicker .datepicker table tr td:hover {
-    background-color: #4e5452; /* Darker background for hover effect */
+    background-color: #4e5452;
 }
 
 .datetimepicker .timepicker .bootstrap-timepicker-widget {
-    background-color: #2c2c2c; /* Match the dark background */
-    color: #ffffff; /* White text color */
+    background-color: #2c2c2c;
+    color: #ffffff;
 }
 
 .datetimepicker .bootstrap-timepicker-widget .btn {
-    background-color: #007bff; /* Button background */
-    color: #ffffff; /* Button text color */
-    border: none; /* Remove border */
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
 }
 
 .datetimepicker .bootstrap-timepicker-widget .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
-/* Input field */
 .form-control {
-    background-color: var(--card-bg); /* Input background color */
-    color: var(--text-color); /* Input text color */
-    border: 1px solid var(--start-color); /* Green border */
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--start-color);
     width: 6em;
     margin: 20px auto;
     text-align: center;
@@ -280,4 +278,21 @@
     background-color: var(--card-bg);
     color: var(--text-color);
     box-shadow: none;
+}
+
+.bootstrap-datetimepicker-widget {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-14%, -85%); 
+    z-index: 1050;
+}
+
+.bootstrap-datetimepicker-widget {
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
