@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +23,7 @@
         <div class="timer-container">
             <div class="cont" id="hidden-setting">
                 <div class="timer-setting">
-                    <input type="time" name="time" id="time" class="time-input" step="2" value="00:00:00"><br>
+                    <input class="form-control time-in" type="text" id="time-in" placeholder="hh:mm:ss" />
                     <button id="start">Start</button>
                     <button id="reset">Reset</button>
                 </div>
@@ -32,7 +41,7 @@
                 <button id="cancel">Cancel</button>
                 <button id="pause">Pause</button>
                 <button id="resume">Resume</button>
-                <button id="stop-alarm" style="display:none;">Stop Alarm</button>
+                <button id="stop-alarm" style="display:none; color:#2c2c2c">Stop Alarm</button>
                 <button id="restart">Restart</button>
                 <audio id="alarm-sound" src="alarm.wav" preload="auto" loop></audio>
             </div>

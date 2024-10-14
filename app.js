@@ -12,7 +12,7 @@ var stopAlarmBtn = document.getElementById("stop-alarm");
 var r = document.querySelector(":root");
 var circle = document.getElementById("circle");
 
-var timeInput = document.getElementById("time");
+var timeInput = document.getElementById("time-in");
 var timerText = document.getElementById("timer-text");
 
 var alarmSound = document.getElementById("alarm-sound");
@@ -22,6 +22,21 @@ let intervalId;
 let settedTime = "00:00:00";
 let timeRemaining = 0;
 let totalTime = 0;
+
+$(function() {
+  $('#time-in').datetimepicker({
+      format: 'HH:mm:ss'
+  });
+});
+
+$('#time-in').val('00:00:00');
+
+$('.time-in').on(
+  'dp.show',
+  function(e) {
+  $(".bootstrap-datetimepicker-widget").css(
+  "background-color", "#3c3e43");
+  });
 
 function setTimer() {
   settedTime = timeInput.value;

@@ -233,3 +233,51 @@
         font-weight: 400;
         font-size: 16px;
     }
+
+/* Customize the datetime picker */
+.datetimepicker {
+    background-color: #b40e0e; /* Dark background */
+    color: #ffffff; /* White text color */
+}
+
+.datetimepicker .datepicker table tr td.active, 
+.datetimepicker .datepicker table tr td.active:hover {
+    background-color: #5cb85c; /* Green for active day */
+    color: #ffffff; /* White text color for active day */
+}
+
+.datetimepicker .datepicker table tr td:hover {
+    background-color: #4e5452; /* Darker background for hover effect */
+}
+
+.datetimepicker .timepicker .bootstrap-timepicker-widget {
+    background-color: #2c2c2c; /* Match the dark background */
+    color: #ffffff; /* White text color */
+}
+
+.datetimepicker .bootstrap-timepicker-widget .btn {
+    background-color: #007bff; /* Button background */
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove border */
+}
+
+.datetimepicker .bootstrap-timepicker-widget .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Input field */
+.form-control {
+    background-color: var(--card-bg); /* Input background color */
+    color: var(--text-color); /* Input text color */
+    border: 1px solid var(--start-color); /* Green border */
+    width: 6em;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 15px;
+    border: 1px solid var(--button-bg);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: none;
+}
